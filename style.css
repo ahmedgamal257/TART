@@ -1,0 +1,174 @@
+/* General styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6; /* Light background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: left;
+}
+
+/* Container styling */
+.container {
+    width: 60%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Interface headers */
+h1 {
+    font-size: 24px;
+    color: #4CAF50; /* Green header */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Parameters interface styling */
+.parameters {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    resize: none;
+}
+
+label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button styling */
+.buttons {
+    text-align: center;
+}
+
+button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Hidden sections */
+.hidden {
+    display: none;
+}
+
+/* Memorization and test interfaces */
+#chunkDisplay, #questionDisplay, #answerDisplay {
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px 0;
+    background-color: #eafaf1; /* Light background for these sections */
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Ensure scrolling is enabled */
+
+}
+
+/* Update styles for answerDisplay in dark blue violet theme */
+#answerDisplay {
+    color: #333; /* Light text color for light theme */
+    font: bold;
+}
+
+
+#timer, #chunkDisplayTimer {
+    font-size: 20px;
+    color: #ff5722; /* Orange timer color */
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Dark Blue Violet Theme Styles */
+body.dark-theme {
+    background-color: #1a1a2e;
+    color: #e0e0f8;
+}
+
+
+.container.dark-theme {
+    background-color: #252547;
+    color: #e0e0f8;
+}
+
+button.dark-theme {
+    background-color: #3e3e8c; /* Blue violet button */
+    color: #ffffff; /* White text */
+}
+
+button.dark-theme:hover {
+    background-color: #57579c; /* Lighter blue violet on hover */
+}
+
+#chunkDisplay, #questionDisplay, #answerDisplay.dark-theme {
+    background-color: #252547; /* Darker violet for these sections */
+    border: none;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-height: 300px;
+    overflow-y: auto; /* Ensure scrolling is enabled */
+
+
+}
+
+
+
+#timer, #chunkDisplayTimer {
+    font-size: 20px;
+    color: #ff5722; /* Orange timer color */
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.word:hover {
+    color: rgb(158, 26, 107);
+    transition: color .5s ease;
+}

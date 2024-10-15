@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorization and Test App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- PARAMETERS INTERFACE -->
+        <div id="parametersInterface">
+            <h1>Parameters Interface</h1>
+
+            <div class="parameters">
+                <!-- Dark Theme Toggle -->
+                <label for="themeToggle">light Theme:</label>
+                <input type="checkbox" id="themeToggle">
+                
+                <!-- Input for Python Dictionary -->
+                <textarea id="inputText" placeholder="Enter Python Dictionary" rows="6"></textarea>
+
+                <div>
+                    <!-- Add these lines for selecting previously used texts -->
+                    <label for="previousTexts">Previously Used Texts:</label>
+                    <select id="previousTexts">
+                        <option value="">--Select Previously Used Text--</option>
+                    </select>
+                    <button id="loadPreviousText">Load Text</button>
+                    
+                    <!-- Dropdown for chunks -->
+                    <label for="chunkSelect">Choose a chunk:</label>
+                    <select id="chunkSelect" required></select>
+                </div>
+                
+                <label for="timeChunk">Time to display chunk text (seconds):</label>
+                <input type="number" id="timeChunk" placeholder="Time (t)" value="0.8" min="0.1" required>
+    
+                <label for="timeAnswer">Time to display answer (seconds):</label>
+                <input type="number" id="timeAnswer" placeholder="Time (s)" value="60" min="1" required>
+            </div>
+    
+    
+            <!-- Buttons -->
+            <div class="buttons">
+                <button id="startMemorization">Start Memorization</button>
+                <button id="startListening">Start listening</button>
+                <button id="startTest">Start Test</button>
+            </div>
+        </div>
+
+        <!-- MEMORIZATION INTERFACE -->
+        <div class="hidden" id="MemorizationInterface">
+            <h1>Memorization Interface</h1>
+            <div id="chunkDisplay"></div>
+            <div id="chunkDisplayTimer"></div>
+            
+            <!-- Add this button for starting the test -->
+            <button id="startTestAfterMemorization" class="hidden">Start Test on This Chunk</button>
+        </div>
+
+        <!-- TEST INTERFACE -->
+        <div class="hidden" id="TestInterface">
+            <h1>Test Interface</h1>
+            <div id="questionDisplay"></div>
+            <div id="answerDisplay"></div>
+            <div id="timer"></div>
+            <button id="nextQuestion" class="hidden">Next Question</button>
+            <button id="showAnswer">Show Answer</button>
+
+        </div>
+
+        <!-- listen interface -->
+         <div class="hidden" id="listenInterface">
+            <audio id="audio-player" controls autoplay></audio>
+
+            <!-- Button to start test -->
+            <button id="startTestAfterlistening" class="hidden">Start Test on This Chunk</button>
+         </div>
+    </div>
+
+    <!-- audio to play after timer ends -->
+    <audio id="timer-sound" preload="auto">
+        <source src="sound.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
